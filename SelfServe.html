@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Poppins", sans-serif}
+.menu {display: none}
+.bgimg {
+    
+  background-repeat: no-repeat;
+  min-height: 90%;
+  background-color: #212338;
+  background-image: url("/Users/kevinaldrich/Downloads/Exos_Burst_Gray.png"); /* fallback */
+  background-image: url("/Users/kevinaldrich/Downloads/Exos_Burst_Gray.png"), no-repeat  linear-gradient(to left, #F0FBFF 0%, #120F11 92%, #030000 100%); /* W3C */
+}
+</style>
+</head>
+<body>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-center">
+ <img id="LogoDiv_Image" src="/Users/kevinaldrich/Downloads/EXOS LOGO_WHITE_RGB.png" width="500px"><!--//modified (replace with something in: https://drive.google.com/drive/folders/1rzWQzOIZOuNixZ26uwfA00qxq3Z2Cw4F)-->
+    </p>
+    <div id="LoginFrame" name="LoginFrame" objtype="LoginFrame">
+        <div id="LoginFrame_txt">
+            <iframe id="domainLogin" customframesize="SMALL" onload="resizeIframe(this);" name="domainLogin" height="350" width="340" marginheight="0" marginwidth="0" frameborder="0"  src="images/admin-bg-center.gif" application="yes" scrolling="yes"></iframe>
+ <br>
+        <span class="w3-tag w3-large" style="background-color:transparent;">Username = first.last (i.e. '<b>jsmith</b>')<br>DO NOT USE NAME<b>@TEAMEXOS</b></span>
+        </div>
+  </div>
+</header>
+
+<!--Footer-->
+<footer class="ft-img w3-center w3-black w3-padding-48 w3-large">
+<center>
+    <table>
+    <tr>
+        <td>
+            <div id="Reset" name="Reset" objtype="textArea" style="cursor: pointer; display: block;">
+                <form method="POST" id="resetForm" name="resetForm" action="accounts/authVerify?operation=reset" autocomplete="off">
+                    <span id="Reset_SPAN" class="editor_body">
+                        <div id="hrefReset" class="clickherelogintxt" href="javascript:void(0)" target="_top" onclick="javascript:document.resetForm.submit()">
+                            Forgot your password</div></span>
+                        <div id="Reset_Opt" name="Reset_Opt" style="float: left; width: 45px; padding-left:5px;"></div>
+                        <input type="hidden" id="adscsrf" name="adscsrf" value="adf36188-4c54-4a6d-bf72-648c1a31f3d5">
+                    </span>
+                </form>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="Unlock" name="Unlock"  objtype="textArea">
+                <form method="POST" id="unLockForm" name="unLockForm" action="accounts/authVerify?operation=unlock" autocomplete="off">
+                    <span id="Unlock_SPAN" class="editor_body">
+                    <div id="hrefUnlock" class="clickherelogintxt" href="javascript:document.unLockForm.submit()" target="_top" onclick="javascript:document.unLockForm.submit()">
+                    Unlock your account</div>
+                    <div id="hrefUnlock" class="clickherelogintxt" href="javascript:document.unLockForm.submit()" target="_top" onclick="javascript:document.unLockForm.submit()">
+                    </div></span>
+                <div id="Unlock_Opt" style="float:left;width:45px; padding-left:5px;"></div>
+                <input type="hidden" id="adscsrf" name="adscsrf" value="adf36188-4c54-4a6d-bf72-648c1a31f3d5"></form>
+            </div>
+        </td>
+    </tr>
+</table>
+</center>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
